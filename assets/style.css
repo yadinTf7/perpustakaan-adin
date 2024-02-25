@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Tambahkan CSS untuk memberi warna latar belakang dan garis tepi pada kontainer */
+.custom-container {
+  background-color: #3333335e; /* Warna putih dengan tingkat transparansi yang sedang */
+  border: 1px solid black;
+  border-radius: 10px; /* Optional: Untuk memberikan sudut melengkung pada border */
+  padding: 15px; /* Optional: Untuk memberikan ruang dalam kontainer */
+  max-height: 80vh; /* Tinggi maksimum container, disesuaikan dengan kebutuhan Anda */
+  overflow-x: auto; /* Menambahkan scrollbar secara horizontal jika kontennya lebih besar dari lebar maksimum */
+  display: flex; /* Menggunakan flex container agar child element (card) bisa diatur dengan flex properties */
+  
+}
+body {
+  background-image: url("../index.png");
+  background-color: rgb(0, 0, 0);
+}
+
+#footer {
+  padding: 1rem;
+  position: fixed; /* Menggunakan position fixed untuk membuat footer tetap di bagian bawah layar */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #343a40;
+  color: white;
+  border-radius: 30px 30px 0 0;
+}
+
+nav {
+  height: 65px;
+  border: 1px solid black;
+  border-radius: 0 0 50px 50px;
+}
+.wrap {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 0 60px;
+  background: url(https://images.unsplash.com/photo-1485069203392-8e1aeb1ebf02?auto=format&fit=crop&w=1054&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.wrap:after {
+  content:'';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+}
+
+.slider {
+  position: relative;
+  z-index: 200;
+  padding: 0 0px;
+  margin: 5rem auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -25px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-family: monospace;
+  font-size: 5rem;
+  z-index: 300;
+  outline: none;
+}
+
+.slick-prev {
+  left: -50px;
+  text-align: left;
+}
+
+.slick-next {
+  right: -50px;
+  text-align: right;
+}
+
+
+
+.item.slick-slide {
+  width: 400px;
+  height: 400px !important;
+  transition: transform .4s;
+  position: relative; 
+}
+
+.slick-slide:after {
+  content:'';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  transition: transform .4s;
+}
+
+.item.slick-slide {
+  transform: scale(0.7)  translate(640px);
+}
+
+.item.slick-slide.slick-center + .slick-slide {
+  transform: scale(0.8) translate(-250px);
+  z-index: 10;
+}
+
+.item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+  transform: scale(0.7)  translate(-640px);
+  z-index: 5;
+}
+
+.item.slick-slide.slick-active {
+  transform: scale(0.8) translate(250px);
+}
+
+.item.slick-slide.slick-center {
+  /* margin: 0 -10%; */
+  transform: scale(1);
+  z-index: 30;
+}
+
+.slick-center:after {
+  opacity: 0;
+}
+.layout-card-custom {
+  display: flex;
+  background-color: #3333335e; /* Warna putih dengan tingkat transparansi yang sedang */
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* Child element (card) tidak akan wrap ke baris berikutnya */
+  overflow-x: auto; /* Menambahkan scrollbar secara horizontal jika kontennya lebih besar dari lebar maksimum */
+}
+
+
+
+.header-text {
+  position: relative;
+  background-color: #3333335e; /* Warna latar belakang */
+  padding: 20px; /* Jarak padding dari tulisan ke tepi */
+  border-radius: 20px; /* Radius sudut border */
+  overflow: hidden;
+}
+
+.header-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #3333335e; /* Gradien warna */
+  border-radius: 20px; /* Radius sudut border */
+  z-index: -1; /* Menaruh lapisan di belakang teks */
+}
+
+.card {
+  
+  background-color: aliceblue;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Menambahkan blur ke efek tembus pandang */
+  overflow: hidden; /* Agar efek blur hanya terlihat di dalam card */
+  width: 10rem; /* Lebar card, sesuaikan dengan kebutuhan Anda */
+}
+
+.card img {
+  border: 2px solid black;
+  border-radius: 1px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Agar gambar tetap terlihat proporsional */
+}
+
+.card-body {
+  padding: 20px;
+  
+}
+
+
+.list-group-item {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* Tambahkan style untuk table agar tetap di tempat saat scrolling */
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Buat elemen table header menjadi sticky */
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.kategori-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kategori-buttons button {
+  flex: 1;
+  
+}
+
+@media (max-width: 768px) {
+.navbar .navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.navbar .navbar-nav .dropdown-menu.show {
+  display: block;
+}
+
+.navbar .navbar-nav .dropdown-menu .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+@media (max-width: 768px) {
+  .kategori-buttons {
+    flex-wrap: wrap;
+  }
+
+  .kategori-buttons button {
+    flex: 20%; /* Tombol akan memenuhi 49% lebar parent element dan tidak bisa mengubah ukuran (shrink/flex) */
+    margin-bottom: 3px; /* Jarak antar tombol */
+  }
+}
+
+.dropdown {
+  margin-left: 10px;
+  margin-right: auto;
+  position: fixed;
+  top: 10px; /* Menentukan jarak dari atas */
+  right: 10px; /* Menentukan jarak dari kanan */
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+.container.text-left {
+  margin-left: 10px; /* Atur jarak kiri */
+}
+}

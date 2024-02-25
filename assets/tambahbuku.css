@@ -1,0 +1,100 @@
+.card {
+    margin-top: 5rem;
+    width: 80%;
+    border-radius: 15px;
+    background-color: #33333350;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+    border: 2px solid black;
+    max-height: 80vh; /* Ubah tinggi card menjadi maksimal 120vh */
+    overflow-y: auto;
+}
+
+.card-header {
+    background-color: #ffffff8c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid black; /* Tambah garis tepi di bawah card header */
+}
+
+.card-body {
+    padding: 2rem;
+    position: relative;
+}
+
+.card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-color: #000;
+    border-width: 2px;
+}
+
+.custom-container {
+    background-color: #3333335e;
+    border: 1px solid black;
+    border-radius: 0 0 50px 50px;
+    padding: 5px;
+    max-height: 60vh;
+    display: flex;
+    max-width: 115vh;
+}
+
+.custom-css-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-actions {
+    position: sticky;
+    bottom: 0;
+    padding-top: 1rem;
+    z-index: 101;
+}
+
+.btn-actions button,
+.btn-actions input {
+    margin-right: 0.5rem;
+}
+
+.card-title {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff5e;
+    padding: 1rem;
+    z-index: 100;
+}
+
+/* Tulisan "Isi Buku" berbeda barisan */
+.custom-css-form .input-group-label {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Input type dengan outline berwarna hitam */
+.custom-css-form .form-control-outline {
+    border: 2px solid black;
+}
+@media screen and (max-width: 714px) {
+    .custom-css-form {
+      width: 100%;
+      display: inline;
+      gap: 1rem;
+    }
+         }
+         @media screen and (max-width: 421px) {
+    .custom-css-form {
+      width: auto;
+      display: inline;
+      gap: 1rem;
+    }
+         }

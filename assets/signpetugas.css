@@ -1,0 +1,59 @@
+.card {
+    margin-top: 5rem;
+    width: 80%;
+    border-radius: 15px;
+    background-color: #33333350;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+    border: 2px solid black;
+}
+.card-header{
+  background-color: #ffffff8c;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-color: #000;
+    border-width: 2px;
+}
+
+.input-group {
+    margin-top: 1rem;
+    
+}
+
+.input-group input {
+border-radius: 50px; /* Menambahkan radius untuk ujung input */
+height: 40px; /* Menambahkan ketinggian (sesuaikan dengan kebutuhan Anda) */
+padding: 5px 10px; /* Menambahkan padding untuk penyesuaian tampilan */
+background-color: #ffffff8c; /* Warna latar belakang input */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn-container button,
+.btn-container a {
+    margin-left: 10px;
+}
+
+.bottom-line {
+    border-bottom: 2px solid #000;
+    margin-top: 1rem;
+}

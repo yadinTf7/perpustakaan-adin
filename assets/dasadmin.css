@@ -1,0 +1,53 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .list-group-item {
+    border-top: 1px solid #ddd;
+  }
+
+  .btn-group {
+    margin-bottom: 15px;
+    
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+  }
+  body.modal-open {
+    overflow: hidden;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000; /* Warna latar belakang hitam (sesuaikan jika diperlukan) */
+  }
+
+  /* Mengatur warna teks dan latar belakang untuk modal */
+  .modal-content {
+    background-color: #ddd; /* Warna latar belakang modal (sesuaikan jika diperlukan) */
+    color: #000; /* Warna teks modal (sesuaikan jika diperlukan) */
+  }
+  @media screen and (max-width: 768px) {
+    .navbar-nav{
+      margin-left:75%;
+      position: fixed;
+    }
+  }

@@ -1,0 +1,62 @@
+.card {
+    border-radius: 12px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    background-color: #3333335e;
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  
+  .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+#searchBox {
+  margin-right: auto; /* Geser input search ke kiri sejauh mungkin */
+}
+
+#searchBox input {
+  margin-right: 10px; /* Beri sedikit ruang antara input search dan tombol dropdown */
+}
+.card {
+    border-radius: 12px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    width: 96%;
+    background-color: #3333335e;
+    padding: 20px;
+    overflow-X: auto;
+  }
+
+  .table-container {
+    max-height: 400px;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .table {
+    width: 99%;
+    margin-bottom: 0;
+  }
+
+  .table thead th {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    
+    z-index: 2;
+    margin-right: 17px; /* Mengatasi margin yang hilang pada sticky */
+  }
+
+  .table th, .table td {
+    border: 1px solid black;
+    text-align: center;
+  }
